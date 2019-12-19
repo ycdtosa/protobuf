@@ -60,6 +60,8 @@ namespace protobuf {
 namespace compiler {
 namespace objectivec {
 
+using std::isupper;
+
 // <io.h> is transitively included in this file. Import the functions explicitly
 // in this port namespace to avoid ambiguous definition.
 namespace posix {

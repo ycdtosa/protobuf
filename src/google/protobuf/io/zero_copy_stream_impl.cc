@@ -32,7 +32,7 @@
 //  Based on original Protocol Buffers design by
 //  Sanjay Ghemawat, Jeff Dean, and others.
 
-#ifndef _MSC_VER
+#if ! defined(_MSC_VER) && ! defined(__CODEGEARC__)
 #include <fcntl.h>
 #include <sys/stat.h>
 #include <sys/types.h>

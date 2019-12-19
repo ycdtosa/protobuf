@@ -46,7 +46,7 @@
 #endif
 #include <fcntl.h>
 #include <sys/stat.h>
-#ifndef _MSC_VER
+#if defined(_MSC_VER) && ! defined(__CODEGEARC__)
 #include <unistd.h>
 #endif
 #include <ctype.h>

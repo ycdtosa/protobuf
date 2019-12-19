@@ -60,6 +60,8 @@ using util::error::INVALID_ARGUMENT;
 }  // namespace error
 
 namespace converter {
+using std::isxdigit;
+using std::isdigit;
 
 // Number of digits in an escaped UTF-16 code unit ('\\' 'u' X X X X)
 static const int kUnicodeEscapedLength = 6;

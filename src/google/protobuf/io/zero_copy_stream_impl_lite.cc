@@ -295,7 +295,7 @@ void CopyingInputStreamAdaptor::AllocateBufferIfNeeded() {
 void CopyingInputStreamAdaptor::FreeBuffer() {
   GOOGLE_CHECK_EQ(backup_bytes_, 0);
   buffer_used_ = 0;
-  buffer_.reset();
+  buffer_.reset(nullptr);
 }
 
 // ===================================================================
@@ -373,7 +373,7 @@ void CopyingOutputStreamAdaptor::AllocateBufferIfNeeded() {
 
 void CopyingOutputStreamAdaptor::FreeBuffer() {
   buffer_used_ = 0;
-  buffer_.reset();
+  buffer_.reset(nullptr);
 }
 
 // ===================================================================

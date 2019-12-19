@@ -246,7 +246,7 @@ const google::protobuf::EnumValue* FindEnumValueByNameWithoutUnderscoreOrNull(
 std::string EnumValueNameToLowerCamelCase(StringPiece input) {
   std::string input_string(input);
   std::transform(input_string.begin(), input_string.end(), input_string.begin(),
-                 ::tolower);
+                 std::tolower);
   return ToCamelCase(input_string);
 }
 

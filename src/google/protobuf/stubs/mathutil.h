@@ -67,12 +67,12 @@ bool AlmostEquals(T a, T b) {
 }
 template<>
 inline bool AlmostEquals(float a, float b) {
-  return fabs(a - b) < 32 * FLT_EPSILON;
+  return std::fabs(a - b) < 32 * FLT_EPSILON;
 }
 
 template<>
 inline bool AlmostEquals(double a, double b) {
-  return fabs(a - b) < 32 * DBL_EPSILON;
+  return std::fabs(a - b) < 32 * DBL_EPSILON;
 }
 
 }  // namespace internal

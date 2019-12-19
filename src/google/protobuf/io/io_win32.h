@@ -55,6 +55,11 @@
 #include <google/protobuf/port.h>
 #include <google/protobuf/port_def.inc>
 
+#if defined ( __CODEGEARC__ )
+#include <stdio.h>
+#include <sys/stat.h>
+#endif
+
 // Compilers on Windows other than MSVC (e.g. Cygwin, MinGW32) define the
 // following functions already, except for mkdir.
 namespace google {

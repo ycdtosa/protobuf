@@ -71,6 +71,10 @@
 #include <string>
 #include <vector>
 
+#if defined (__CODEGEARC__)
+int _dup2( int fd1, int fd2 ) { return ::dup2( fd1, fd2 ); }
+int _setmode( int fd, int mode ) { return ::setmode( fd, mode ); }
+#endif
 namespace google {
 namespace protobuf {
 namespace io {

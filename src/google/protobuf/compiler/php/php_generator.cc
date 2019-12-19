@@ -117,7 +117,7 @@ std::string ReservedNamePrefix(const string& classname,
   bool is_reserved = false;
 
   string lower = classname;
-  transform(lower.begin(), lower.end(), lower.begin(), ::tolower);
+  transform(lower.begin(), lower.end(), lower.begin(), std::tolower);
 
   for (int i = 0; i < kReservedNamesSize; i++) {
     if (lower == kReservedNames[i]) {
@@ -201,7 +201,7 @@ std::string LegacyGeneratedClassName(const DescriptorType* desc) {
 
 std::string ClassNamePrefix(const string& classname) {
   string lower = classname;
-  transform(lower.begin(), lower.end(), lower.begin(), ::tolower);
+  transform(lower.begin(), lower.end(), lower.begin(), std::tolower);
 
   for (int i = 0; i < kReservedNamesSize; i++) {
     if (lower == kReservedNames[i]) {
@@ -216,7 +216,7 @@ std::string ConstantNamePrefix(const string& classname) {
   bool is_reserved = false;
 
   string lower = classname;
-  transform(lower.begin(), lower.end(), lower.begin(), ::tolower);
+  transform(lower.begin(), lower.end(), lower.begin(), std::tolower);
 
   for (int i = 0; i < kReservedNamesSize; i++) {
     if (lower == kReservedNames[i]) {

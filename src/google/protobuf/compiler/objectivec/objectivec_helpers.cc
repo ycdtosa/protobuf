@@ -28,7 +28,7 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-#ifndef _MSC_VER
+#if ! defined(_MSC_VER) && ! defined(__CODEGEARC__)
 #include <unistd.h>
 #endif
 #include <climits>

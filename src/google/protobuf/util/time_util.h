@@ -36,7 +36,7 @@
 #include <ctime>
 #include <ostream>
 #include <string>
-#ifdef _MSC_VER
+#if defined(_MSC_VER) || defined(__CODEGEARC__)
 #ifdef _XBOX_ONE
 struct timeval {
   int64 tv_sec;  /* seconds */
